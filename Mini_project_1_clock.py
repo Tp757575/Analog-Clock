@@ -88,7 +88,7 @@ while True:
     angle = 360 / 60 * s + 270  # Beregner vinkel for sekundviseren
     new_position = [RADIUS * math.cos(math.radians(angle)), RADIUS * math.sin(math.radians(angle))]
     end_position = (CENTER[0] + new_position[0] * 0.8, CENTER[1] + new_position[1] * 0.8) # Viseren forkortes lidt for at fremstå pænere på uret
-    pygame.draw.line(screen, blå, CENTER, end_position, 2)  # Tegner sekundviseren
+    pygame.draw.line(screen, blå, CENTER, end_position, 3)  # Tegner sekundviseren
 
     # Det der gøres for skeundviseren gentages for både minut- og timeviseren
 
@@ -96,7 +96,7 @@ while True:
     angle = 360 / 60 * m + 270 
     new_position = [RADIUS * math.cos(math.radians(angle)), RADIUS * math.sin(math.radians(angle))]
     end_position = (CENTER[0] + new_position[0] * 0.7, CENTER[1] + new_position[1] * 0.7)  
-    pygame.draw.line(screen, grøn, CENTER, end_position, 5) 
+    pygame.draw.line(screen, grøn, CENTER, end_position, 3) 
 
     # Tegner timeviser
     angle = h % 12 * 30 - 90 + m * 0.5  # (inkluderer minutter for præcis vinkel)
